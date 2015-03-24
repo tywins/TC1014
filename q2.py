@@ -1,14 +1,10 @@
 #Paulina Romo Villalobos
-def gcd(n,m):
-    if(n == m):
-        answer = n
-    elif(n > m):
-        answer = gcd((n-m), m)
-    else:
-        answer = gcd(n, (m-n))
-    return answer
+def find_threes(m):
+    sum = 0
+    for p in m:
+        if(p % 3 == 0):
+            sum = sum + p
+    return sum
 
-x = int(input("First number: "))
-y = int(input("Second number "))
-gcdiv = gcd(n, m)
-print("GCD of", x , "and", y, ": ", gcdiv)
+n = [0,6,33,8,9,11,15,24]
+print(find_threes(n))
